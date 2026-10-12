@@ -1,6 +1,6 @@
+site_url: https://elegant-puppy-5754d6.netlify.app
 backend:
-  name: github
-  repo: vandeshlin-del/pedex-website
+  name: git-gateway
   branch: main
 
 media_folder: "assets/uploads"
