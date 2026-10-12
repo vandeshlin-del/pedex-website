@@ -1,14 +1,26 @@
 {
-  "contact": {
-    "email": "tiger@pedex.cn",
-    "phone": "+86 18782927342",
-    "whatsapp": "+86 18782927342",
-    "address": "No.888, South Section of Tianfu Avenue, Huayang Street, Tianfu New District, Chengdu, P.R. China",
-    "hours": "Monday – Friday, 9:00 – 18:00 (Beijing Time)"
-  },
-  "contact.phone": "+86 18782927342",
-  "contact.whatsapp": "+86 18782927342",
-  "contact.hours": "Monday – Friday, 9:00 – 18:00 (Beijing Time)",
+  "hero.eyebrow": "Optical Interconnect · Transceivers· AOC · Fiber Cabling",
+  "hero.title1": "We Make the Connections. Light Does the Rest.",
+  "hero.title2": "----Optical Transceivers and Components for Datacom and Broadband Networks.",
+  "hero.subtitle": "Pedex manufactures and supplies a comprehensive range of optical transceivers across mainstream data rates, along with fiber optics, patch cords, connectors, active optical cables, and fiber optic cabling solutions. With engineering expertise and flexible global sourcing capabilities, we deliver reliable connectivity solutions tailored to diverse customer requirements.",
+  "stats": [
+    {
+      "value": "10G–1.6T",
+      "label": "Transceiver rate coverage"
+    },
+    {
+      "value": "4",
+      "label": "Product lines under one roof"
+    },
+    {
+      "value": "2",
+      "label": "Business divisions: optical + industrial valves"
+    },
+    {
+      "value": "Global",
+      "label": "Export & on-time delivery"
+    }
+  ],
   "marquee": [
     {
       "img": "/assets/uploads/400g-qsfp-dd图片.png",
@@ -59,63 +71,18 @@
       "text": "Through our subsidiary, we distribute trusted Chinese-brand industrial valves for process industries."
     }
   ],
-  "contact.address": "No.888, South Section of Tianfu Avenue, Huayang Street, Tianfu New District, Chengdu, P.R. China",
-  "about.approach": "We don't try to do everything. We focus on optical components we understand well, and on the valve brands we have personally vetted. If a product isn't right for your application, we'll tell you.",
-  "about.mission": "To be the supplier our customers call when a link needs to work on day one — and keep working for years after.",
-  "productsValve": [
-    {
-      "title": "Ball Valves",
-      "text": "Cast / forged steel, stainless steel, floating and trunnion designs."
-    },
-    {
-      "title": "Gate / Globe / Check Valves",
-      "text": "ANSI / JIS / DIN standards, flange and threaded ends."
-    },
-    {
-      "title": "Control Valves",
-      "text": "Pneumatic and electric actuated valves for process control."
-    },
-    {
-      "title": "Valve Accessories",
-      "text": "Actuators, solenoids, limit switches, positioners."
-    }
-  ],
-  "hero.subtitle": "Pedex manufactures and supplies a comprehensive range of optical transceivers across mainstream data rates, along with fiber optics, patch cords, connectors, active optical cables, and fiber optic cabling solutions. With engineering expertise and flexible global sourcing capabilities, we deliver reliable connectivity solutions tailored to diverse customer requirements.",
-  "hero.title1": "We Make the Connections. Light Does the Rest.",
-  "about": {
-    "title": "Two businesses, one standard: reliable supply.",
-    "text": "Pedex is a supplier of optical interconnect products and industrial flow-control equipment. Our optical division covers the full physical layer — transceivers, AOCs, fiber jumpers and fiber cables — serving telecom operators, datacenter integrators, system houses and regional distributors.",
-    "points": [
-      "Optical transceivers across 10G to 1.6T, including PON and coherent platforms",
-      "AOCs and fiber cabling for in-building, campus and datacenter deployments",
-      "A separate valve division acting as authorized distributor for leading Chinese industrial valve brands",
-      "Engineering support: link budget, BOM configuration, replacement guidance",
-      "Flexible order quantities, export documentation and global logistics"
-    ],
-    "mission": "To be the supplier our customers call when a link needs to work on day one — and keep working for years after.",
-    "approach": "We don't try to do everything. We focus on optical components we understand well, and on the valve brands we have personally vetted. If a product isn't right for your application, we'll tell you.",
-    "markets": "Telecom & datacom · Data centers · Access networks · Industrial automation · Process industries"
-  },
-  "contact.email": "tiger@pedex.cn",
-  "hero.title2": "----Optical Transceivers and Components for Datacom and Broadband Networks.",
+  "about.title": "Two businesses, one standard: reliable supply.",
   "about.text": "Chengdu Pedex Technology Co., Ltd. was founded in 2021 in Chengdu, Sichuan, China — the beautiful “Land of Abundance.” We serve customers across domestic and international markets, with an overseas presence spanning Europe, the United States, the Middle East, and North Africa.\n\nOur business brings together two specialized divisions: optical communications and industrial flow control.\n\nOptical Connectivity, from the Device to the Network\n\nOur optical communications division covers a broad range of connectivity products, including optical transceivers, optical components, fiber optics, patch cords, connectors, active optical cables (AOCs), and fiber optic cables.\n\nWe work with telecom operators, data center integrators, system integrators, and regional distributors to meet a wide range of technical and commercial requirements. Whether you need standard products, customized solutions, or a sourcing partner who understands the details, we focus on making your supply chain work better.\n\nIndustrial Flow Control, Built for the Job\n\nThrough our subsidiary, we manufacture industrial valves, including gate valves, ball valves, and butterfly valves, serving diverse industrial applications.\n\nDifferent industries, different products — but the same approach: practical solutions, dependable quality, and service that puts the customer first.\n\nFlexible by Design. Practical by Nature.\n\nAt Pedex, we understand that business doesn't always come in one size. Some customers need high-volume supply; others need smaller quantities, special specifications, or a tailored solution.\n\nBig orders are welcome. Small orders are welcome, too. We believe a good partnership should be based on what you need, not just how many units you buy.\n\nFrom standard products to customized requirements, we aim to offer flexible service, competitive value, and a straightforward way of doing business.\n\nPedex — Different industries. Connected by one commitment: making business easier for our customers.",
-  "news": [
-    {
-      "date": "2026",
-      "title": "New product line: 800G OSFP modules now in stock",
-      "text": "Our optical division has expanded 800G SR8 / DR8 / VR8 inventory for datacenter customers. Contact us for lead time and samples."
-    },
-    {
-      "date": "2026",
-      "title": "AOC portfolio expanded to 400G",
-      "text": "400G QSFP-DD AOC cables are now available in standard lengths, supporting high-density switch deployments."
-    },
-    {
-      "date": "2026",
-      "title": "Valve division: new authorized distribution agreement",
-      "text": "Our subsidiary has added a leading Chinese industrial valve brand to its authorized line card. Details available on request."
-    }
+  "about.points": [
+    "Optical transceivers across 10G to 1.6T, including PON and coherent platforms",
+    "AOCs and fiber cabling for in-building, campus and datacenter deployments",
+    "A separate valve division acting as authorized distributor for leading Chinese industrial valve brands",
+    "Engineering support: link budget, BOM configuration, replacement guidance",
+    "Flexible order quantities, export documentation and global logistics"
   ],
+  "about.mission": "To be the supplier our customers call when a link needs to work on day one — and keep working for years after.",
+  "about.approach": "We don't try to do everything. We focus on optical components we understand well, and on the valve brands we have personally vetted. If a product isn't right for your application, we'll tell you.",
+  "about.markets": "Telecom & datacom · Data centers · Access networks · Industrial automation · Process industries",
   "productsOptical": [
     {
       "title": "Optical Transceivers",
@@ -134,31 +101,234 @@
       "text": "Distribution, breakout, armored, outdoor, indoor/outdoor. G.652D / G.657.A1 fiber."
     }
   ],
-  "hero.eyebrow": "Optical Interconnect · Transceivers· AOC · Fiber Cabling",
-  "about.markets": "Telecom & datacom · Data centers · Access networks · Industrial automation · Process industries",
-  "about.title": "Two businesses, one standard: reliable supply.",
-  "hero": {
-    "eyebrow": "Optical Interconnect · AOC · Fiber Cabling",
-    "title1": "Connecting the world,",
-    "title2": "one optical link at a time.",
-    "subtitle": "Pedex supplies optical transceivers across all mainstream rates, active optical cables, fiber patch cords, jumpers and fiber cables — backed by engineering support and flexible global sourcing."
-  },
-  "stats": [
+  "productsValve": [
     {
-      "value": "10G–1.6T",
-      "label": "Transceiver rate coverage"
+      "title": "Ball Valves",
+      "text": "Cast / forged steel, stainless steel, floating and trunnion designs."
     },
     {
-      "value": "4",
-      "label": "Product lines under one roof"
+      "title": "Gate / Globe / Check Valves",
+      "text": "ANSI / JIS / DIN standards, flange and threaded ends."
     },
     {
-      "value": "2",
-      "label": "Business divisions: optical + industrial valves"
+      "title": "Control Valves",
+      "text": "Pneumatic and electric actuated valves for process control."
     },
     {
-      "value": "Global",
-      "label": "Export & on-time delivery"
+      "title": "Valve Accessories",
+      "text": "Actuators, solenoids, limit switches, positioners."
+    }
+  ],
+  "news": [
+    {
+      "date": "2026",
+      "title": "New product line: 800G OSFP modules now in stock",
+      "text": "Our optical division has expanded 800G SR8 / DR8 / VR8 inventory for datacenter customers. Contact us for lead time and samples."
+    },
+    {
+      "date": "2026",
+      "title": "AOC portfolio expanded to 400G",
+      "text": "400G QSFP-DD AOC cables are now available in standard lengths, supporting high-density switch deployments."
+    },
+    {
+      "date": "2026",
+      "title": "Valve division: new authorized distribution agreement",
+      "text": "Our subsidiary has added a leading Chinese industrial valve brand to its authorized line card. Details available on request."
+    }
+  ],
+  "contact.email": "tiger@pedex.cn",
+  "contact.phone": "+86 18782927342",
+  "contact.whatsapp": "+86 18782927342",
+  "contact.address": "No.888, South Section of Tianfu Avenue, Huayang Street, Tianfu New District, Chengdu, P.R. China",
+  "contact.hours": "Monday – Friday, 9:00 – 18:00 (Beijing Time)",
+  "productCatalog": [
+    {
+      "id": "transceivers",
+      "title": "Optical Transceivers",
+      "intro": "SFP+, SFP28, QSFP28, QSFP-DD and OSFP modules from 10G to 1.6T, covering SR, LR, ER, ZR, PON and coherent variants.",
+      "items": [
+        {
+          "name": "10G SFP+",
+          "spec": "SR / LR / ER / ZR · 300 m – 80 km · SM / MM"
+        },
+        {
+          "name": "25G SFP28",
+          "spec": "SR / LR / ER · 100 m – 40 km · SM"
+        },
+        {
+          "name": "100G QSFP28",
+          "spec": "SR4 / LR4 / CWDM4 · 100 m – 2 km · SM"
+        },
+        {
+          "name": "200G QSFP56",
+          "spec": "SR4 / FR4 · 100 m – 2 km · SM"
+        },
+        {
+          "name": "400G QSFP-DD",
+          "spec": "DR4 / FR4 / LR4 · 500 m – 10 km · SM"
+        },
+        {
+          "name": "800G OSFP / QSFP-DD",
+          "spec": "SR8 / DR8 / 2xFR4 · 100 m – 2 km · SM"
+        },
+        {
+          "name": "1.6T",
+          "spec": "Roadmap · contact us for availability"
+        }
+      ]
+    },
+    {
+      "id": "aoc",
+      "title": "AOC Cables",
+      "intro": "Active optical cables for switch-to-server and switch-to-switch links, with low latency and low power.",
+      "items": [
+        {
+          "name": "10G AOC",
+          "spec": "SFP+ · up to 100 m"
+        },
+        {
+          "name": "25G AOC",
+          "spec": "SFP28 · up to 100 m"
+        },
+        {
+          "name": "100G AOC",
+          "spec": "QSFP28 · up to 100 m"
+        },
+        {
+          "name": "400G AOC",
+          "spec": "QSFP-DD · up to 100 m"
+        }
+      ]
+    },
+    {
+      "id": "patchcords",
+      "title": "Fiber Patch Cords / Jumpers",
+      "intro": "SC, LC, FC, ST connectors; single-mode and multi-mode; custom lengths.",
+      "items": [
+        {
+          "name": "LC-LC Duplex",
+          "spec": "SM OS2 / OM3 / OM4 · UPC / APC"
+        },
+        {
+          "name": "SC-SC Duplex",
+          "spec": "SM OS2 / OM3 · UPC"
+        },
+        {
+          "name": "FC-LC Hybrid",
+          "spec": "SM OS2 · UPC / APC"
+        },
+        {
+          "name": "ST-ST Duplex",
+          "spec": "SM OS2 / MM · UPC"
+        },
+        {
+          "name": "Custom lengths",
+          "spec": "0.5 m – 100 m · PVC / LSZH jackets"
+        }
+      ]
+    },
+    {
+      "id": "fibercables",
+      "title": "Fiber Cables",
+      "intro": "Indoor, outdoor and armored fiber optic cables built to G.652D and G.657.A1 standards.",
+      "items": [
+        {
+          "name": "Distribution cable",
+          "spec": "G.652D · indoor · 2-48 fibers"
+        },
+        {
+          "name": "Breakout cable",
+          "spec": "G.652D · indoor · 2-12 fibers"
+        },
+        {
+          "name": "Armored cable",
+          "spec": "G.652D · outdoor · steel tape / wire"
+        },
+        {
+          "name": "Outdoor / Indoor-Outdoor",
+          "spec": "G.652D · G.657.A1 · OS2"
+        }
+      ]
+    },
+    {
+      "id": "ballvalves",
+      "title": "Ball Valves",
+      "intro": "Cast / forged steel, stainless steel, floating and trunnion designs.",
+      "items": [
+        {
+          "name": "Floating ball valve",
+          "spec": "2-piece / 3-piece · cast / forged steel"
+        },
+        {
+          "name": "Trunnion ball valve",
+          "spec": "API 6D · carbon / stainless steel"
+        },
+        {
+          "name": "Three-way ball valve",
+          "spec": "L-port / T-port · manual or actuated"
+        }
+      ]
+    },
+    {
+      "id": "gateglobecheck",
+      "title": "Gate / Globe / Check Valves",
+      "intro": "ANSI / JIS / DIN standards, flange and threaded ends.",
+      "items": [
+        {
+          "name": "Gate valve",
+          "spec": "ANSI / JIS / DIN · flanged"
+        },
+        {
+          "name": "Globe valve",
+          "spec": "ANSI · flanged / threaded"
+        },
+        {
+          "name": "Check valve",
+          "spec": "Swing / lift · flanged / wafer"
+        }
+      ]
+    },
+    {
+      "id": "controlvalves",
+      "title": "Control Valves",
+      "intro": "Pneumatic and electric actuated valves for process control.",
+      "items": [
+        {
+          "name": "Pneumatic control valve",
+          "spec": "Single / double acting"
+        },
+        {
+          "name": "Electric control valve",
+          "spec": "ON/OFF · modulating"
+        },
+        {
+          "name": "Positioner",
+          "spec": "Smart / electro-pneumatic"
+        }
+      ]
+    },
+    {
+      "id": "valveaccessories",
+      "title": "Valve Accessories",
+      "intro": "Actuators, solenoids, limit switches and positioners.",
+      "items": [
+        {
+          "name": "Actuator",
+          "spec": "Pneumatic / electric"
+        },
+        {
+          "name": "Solenoid valve",
+          "spec": "24V DC / 220V AC"
+        },
+        {
+          "name": "Limit switch",
+          "spec": "Mechanical / proximity"
+        },
+        {
+          "name": "Positioner",
+          "spec": "Smart · HART / Profibus"
+        }
+      ]
     }
   ]
 }

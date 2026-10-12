@@ -81,6 +81,18 @@
   .card h3{font-size:17px;color:var(--navy);margin-bottom:8px}
   .card p{font-size:13.5px;color:var(--muted);line-height:1.55}
 
+  .back-link{display:inline-block;margin:4px 0 8px;color:var(--cyan-2);cursor:pointer;font-size:14px;font-weight:600}
+  .back-link:hover{text-decoration:underline}
+  .pd-list{display:flex;flex-direction:column;border-top:1px solid var(--line);margin:6px 0 40px}
+  .pd-item{display:flex;align-items:baseline;justify-content:space-between;gap:24px;padding:17px 2px;border-bottom:1px solid var(--line)}
+  .pd-name{font-weight:700;font-size:16px;color:var(--navy);white-space:nowrap}
+  .pd-spec{color:var(--muted);font-size:14px;text-align:right}
+  @media (max-width:640px){
+    .pd-item{flex-direction:column;gap:4px;align-items:flex-start}
+    .pd-spec{text-align:left}
+    .pd-name{white-space:normal}
+  }
+
   .about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:center}
   .about-list{margin-top:22px;display:grid;gap:12px}
   .about-list li{list-style:none;padding-left:26px;position:relative;color:var(--ink);font-size:15px}
@@ -220,6 +232,20 @@
     <div class="grid-4" id="products-optical" style="margin-bottom:36px"></div>
     <h3 style="color:var(--navy);margin-bottom:18px;font-size:18px">Valve Division (Subsidiary)</h3>
     <div class="grid-4" id="products-valve"></div>
+  </div>
+</section>
+
+<!-- ============ PRODUCT DETAIL ============ -->
+<section class="view" id="view-product">
+  <div class="container">
+    <a class="back-link" onclick="go('products')">← Back to Product Catalog</a>
+    <div class="section-head">
+      <div class="eyebrow-2">Products &amp; Services</div>
+      <h2 id="pd-title"></h2>
+      <p style="color:var(--muted)" id="pd-intro"></p>
+    </div>
+    <div class="pd-list" id="pd-items"></div>
+    <p style="color:var(--muted);margin-bottom:60px">Need a datasheet, sample or quote? <a style="color:var(--cyan-2);text-decoration:underline;cursor:pointer" onclick="go('contact')">Contact us</a>.</p>
   </div>
 </section>
 
@@ -372,17 +398,19 @@
     }
     // products
     var P_ICONS = ['transceiver','aoc','patch','fiber'];
+    var PO_IDS = ['transceivers','aoc','patchcords','fibercables'];
     var po = V(d,'productsOptical');
     if(po){
       document.getElementById('products-optical').innerHTML = po.map(function(p,i){
-        return '<div class="card"><div class="ico">'+(ICONS[P_ICONS[i]]||ICONS.transceiver)+'</div><h3>'+esc(p.title)+'</h3><p>'+nl2br(p.text)+'</p></div>';
+        return '<div class="card clickable" onclick="goProduct(\''+PO_IDS[i]+'\')"><div class="ico">'+(ICONS[P_ICONS[i]]||ICONS.transceiver)+'</div><h3>'+esc(p.title)+'</h3><p>'+nl2br(p.text)+'</p></div>';
       }).join('');
     }
     var pv = V(d,'productsValve');
     if(pv){
       var V_ICONS = ['ball','gate','control','acc'];
+      var PV_IDS = ['ballvalves','gateglobecheck','controlvalves','valveaccessories'];
       document.getElementById('products-valve').innerHTML = pv.map(function(p,i){
-        return '<div class="card"><div class="ico">'+(ICONS[V_ICONS[i]]||ICONS.ball)+'</div><h3>'+esc(p.title)+'</h3><p>'+nl2br(p.text)+'</p></div>';
+        return '<div class="card clickable" onclick="goProduct(\''+PV_IDS[i]+'\')"><div class="ico">'+(ICONS[V_ICONS[i]]||ICONS.ball)+'</div><h3>'+esc(p.title)+'</h3><p>'+nl2br(p.text)+'</p></div>';
       }).join('');
     }
     // news
@@ -414,8 +442,27 @@
     window.scrollTo({top:0,behavior:'smooth'});
   }
 
+  function goProduct(id){
+    var d = window.SITE_DATA || {};
+    var cats = V(d,'productCatalog') || [];
+    var cat = null;
+    for(var i=0;i<cats.length;i++){ if(cats[i].id === id){ cat = cats[i]; break; } }
+    if(!cat){ go('products'); return; }
+    setText('pd-title', cat.title);
+    setText('pd-intro', cat.intro || '');
+    var items = cat.items || [];
+    document.getElementById('pd-items').innerHTML = items.length ? items.map(function(it){
+      return '<div class="pd-item"><div class="pd-name">'+esc(it.name)+'</div><div class="pd-spec">'+esc(it.spec)+'</div></div>';
+    }).join('') : '<p style="color:var(--muted);padding:20px 0">Details coming soon. Contact us for the full list.</p>';
+    document.querySelectorAll('.view').forEach(function(v){ v.classList.remove('active'); });
+    document.getElementById('view-product').classList.add('active');
+    document.querySelectorAll('.menu a').forEach(function(a){ a.classList.toggle('active', a.dataset.view==='products'); });
+    document.getElementById('menu').classList.remove('open');
+    window.scrollTo({top:0,behavior:'smooth'});
+  }
+
   // load content from site.json; keep defaults in HTML if fetch fails
-  fetch('site.json').then(function(r){ return r.json(); }).then(render).catch(function(){ /* keep built-in defaults */ });
+  fetch('site.json').then(function(r){ return r.json(); }).then(function(d){ window.SITE_DATA = d; render(d); }).catch(function(){ /* keep built-in defaults */ });
 
   var route = location.hash.replace('#','') || 'home';
   if(document.getElementById('view-'+route)) go(route);
