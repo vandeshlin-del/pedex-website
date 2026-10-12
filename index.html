@@ -83,15 +83,17 @@
 
   .back-link{display:inline-block;margin:4px 0 8px;color:var(--cyan-2);cursor:pointer;font-size:14px;font-weight:600}
   .back-link:hover{text-decoration:underline}
-  .pd-list{display:flex;flex-direction:column;border-top:1px solid var(--line);margin:6px 0 40px}
-  .pd-item{display:flex;align-items:baseline;justify-content:space-between;gap:24px;padding:17px 2px;border-bottom:1px solid var(--line)}
-  .pd-name{font-weight:700;font-size:16px;color:var(--navy);white-space:nowrap}
-  .pd-spec{color:var(--muted);font-size:14px;text-align:right}
-  @media (max-width:640px){
-    .pd-item{flex-direction:column;gap:4px;align-items:flex-start}
-    .pd-spec{text-align:left}
-    .pd-name{white-space:normal}
-  }
+  .pd-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin:6px 0 40px}
+  .pd-card{background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden;transition:.25s;cursor:default}
+  .pd-card:hover{transform:translateY(-4px);box-shadow:0 12px 30px rgba(11,30,63,.08)}
+  .pd-img{height:160px;background:var(--bg);display:flex;align-items:center;justify-content:center;overflow:hidden}
+  .pd-img img{width:100%;height:100%;object-fit:cover}
+  .pd-img .ico{width:56px;height:56px;border-radius:12px;background:rgba(0,180,216,.1);color:var(--cyan-2);display:flex;align-items:center;justify-content:center}
+  .pd-body{padding:16px 18px 20px}
+  .pd-name{font-weight:700;font-size:15px;color:var(--navy);margin-bottom:6px}
+  .pd-spec{font-size:13px;color:var(--muted);line-height:1.55}
+  @media (max-width:900px){ .pd-grid{grid-template-columns:repeat(2,1fr)} }
+  @media (max-width:640px){ .pd-grid{grid-template-columns:1fr} }
 
   .about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:center}
   .about-list{margin-top:22px;display:grid;gap:12px}
@@ -244,7 +246,7 @@
       <h2 id="pd-title"></h2>
       <p style="color:var(--muted)" id="pd-intro"></p>
     </div>
-    <div class="pd-list" id="pd-items"></div>
+    <div class="pd-grid" id="pd-items"></div>
     <p style="color:var(--muted);margin-bottom:60px">Need a datasheet, sample or quote? <a style="color:var(--cyan-2);text-decoration:underline;cursor:pointer" onclick="go('contact')">Contact us</a>.</p>
   </div>
 </section>
@@ -451,8 +453,11 @@
     setText('pd-title', cat.title);
     setText('pd-intro', cat.intro || '');
     var items = cat.items || [];
+    var CAT_ICON = {transceivers:ICONS.transceiver,aoc:ICONS.aoc,patchcords:ICONS.patch,fibercables:ICONS.fiber,ballvalves:ICONS.ball,gateglobecheck:ICONS.gate,controlvalves:ICONS.control,valveaccessories:ICONS.acc};
+    var icon = CAT_ICON[id] || ICONS.transceiver;
     document.getElementById('pd-items').innerHTML = items.length ? items.map(function(it){
-      return '<div class="pd-item"><div class="pd-name">'+esc(it.name)+'</div><div class="pd-spec">'+esc(it.spec)+'</div></div>';
+      var img = it.img ? '<img src="'+esc(it.img)+'" alt="'+esc(it.name)+'">' : (cat.img ? '<img src="'+esc(cat.img)+'" alt="'+esc(cat.title)+'">' : '<div class="ico">'+icon+'</div>');
+      return '<div class="pd-card"><div class="pd-img">'+img+'</div><div class="pd-body"><div class="pd-name">'+esc(it.name)+'</div><div class="pd-spec">'+esc(it.spec)+'</div></div></div>';
     }).join('') : '<p style="color:var(--muted);padding:20px 0">Details coming soon. Contact us for the full list.</p>';
     document.querySelectorAll('.view').forEach(function(v){ v.classList.remove('active'); });
     document.getElementById('view-product').classList.add('active');
