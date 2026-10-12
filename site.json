@@ -1,30 +1,87 @@
 {
-  "hero": {
-    "eyebrow": "Optical Interconnect · AOC · Fiber Cabling",
-    "title1": "Connecting the world,",
-    "title2": "one optical link at a time.",
-    "subtitle": "Pedex supplies optical transceivers across all mainstream rates, active optical cables, fiber patch cords, jumpers and fiber cables — backed by engineering support and flexible global sourcing."
+  "contact": {
+    "email": "tiger@pedex.cn",
+    "phone": "+86 18782927342",
+    "whatsapp": "+86 18782927342",
+    "address": "No.888, South Section of Tianfu Avenue, Huayang Street, Tianfu New District, Chengdu, P.R. China",
+    "hours": "Monday – Friday, 9:00 – 18:00 (Beijing Time)"
   },
-  "stats": [
-    { "value": "10G–1.6T", "label": "Transceiver rate coverage" },
-    { "value": "4", "label": "Product lines under one roof" },
-    { "value": "2", "label": "Business divisions: optical + industrial valves" },
-    { "value": "Global", "label": "Export & on-time delivery" }
-  ],
+  "contact.phone": "+86 18782927342",
+  "contact.whatsapp": "+86 18782927342",
+  "contact.hours": "Monday – Friday, 9:00 – 18:00 (Beijing Time)",
   "marquee": [
-    { "img": "https://media.doubao.com/space/api/box/stream/download/all_by_mount_point/QpT9biDFjoMSX0xSbnNcjMd0nnf", "label": "400G QSFP-DD", "sub": "Optical Transceiver" },
-    { "img": "https://media.doubao.com/space/api/box/stream/download/all_by_mount_point/QpT9biDFjoMSX0xSbnNcjMd0nnf", "label": "800G OSFP / QSFP-DD", "sub": "Optical Transceiver" },
-    { "img": "https://media.doubao.com/space/api/box/stream/download/all_by_mount_point/QpT9biDFjoMSX0xSbnNcjMd0nnf", "label": "100G QSFP28", "sub": "Optical Transceiver" },
-    { "img": "https://media.doubao.com/space/api/box/stream/download/all_by_mount_point/O9pPbxu1EoJ2iMxByqGctTTinIk", "label": "AOC Cable", "sub": "Active Optical Cable" },
-    { "img": "https://media.doubao.com/space/api/box/stream/download/all_by_mount_point/LZhLb3EFKoCyPVxqH3PcUwqknMe", "label": "Fiber Patch Cord", "sub": "LC / SC / FC / ST" },
-    { "img": "https://media.doubao.com/space/api/box/stream/download/all_by_mount_point/LZhLb3EFKoCyPVxqH3PcUwqknMe", "label": "Fiber Jumper", "sub": "SM / MM · UPC / APC" }
+    {
+      "img": "https://media.doubao.com/space/api/box/stream/download/all_by_mount_point/QpT9biDFjoMSX0xSbnNcjMd0nnf",
+      "label": "400G QSFP-DD",
+      "sub": "Optical Transceiver"
+    },
+    {
+      "img": "https://media.doubao.com/space/api/box/stream/download/all_by_mount_point/QpT9biDFjoMSX0xSbnNcjMd0nnf",
+      "label": "800G OSFP / QSFP-DD",
+      "sub": "Optical Transceiver"
+    },
+    {
+      "img": "https://media.doubao.com/space/api/box/stream/download/all_by_mount_point/QpT9biDFjoMSX0xSbnNcjMd0nnf",
+      "label": "100G QSFP28",
+      "sub": "Optical Transceiver"
+    },
+    {
+      "img": "https://media.doubao.com/space/api/box/stream/download/all_by_mount_point/O9pPbxu1EoJ2iMxByqGctTTinIk",
+      "label": "AOC Cable",
+      "sub": "Active Optical Cable"
+    },
+    {
+      "img": "https://media.doubao.com/space/api/box/stream/download/all_by_mount_point/LZhLb3EFKoCyPVxqH3PcUwqknMe",
+      "label": "Fiber Patch Cord",
+      "sub": "LC / SC / FC / ST"
+    },
+    {
+      "img": "https://media.doubao.com/space/api/box/stream/download/all_by_mount_point/LZhLb3EFKoCyPVxqH3PcUwqknMe",
+      "label": "Fiber Jumper",
+      "sub": "SM / MM · UPC / APC"
+    }
   ],
   "homeCards": [
-    { "title": "Optical Transceivers", "text": "10G, 25G, 100G, 200G, 400G, 800G and 1.6T modules for telecom, datacom and access networks." },
-    { "title": "AOC Cables", "text": "Active optical cables for in-rack and to-rack datacenter connectivity, low latency, low power." },
-    { "title": "Fiber Patch Cords & Jumpers", "text": "SC, LC, FC, ST connectors; single-mode and multi-mode; PVC/LSZH jackets, custom lengths." },
-    { "title": "Industrial Valves", "text": "Through our subsidiary, we distribute trusted Chinese-brand industrial valves for process industries." }
+    {
+      "title": "Optical Transceivers",
+      "text": "10G, 25G, 100G, 200G, 400G, 800G and 1.6T modules for telecom, datacom and access networks."
+    },
+    {
+      "title": "AOC Cables",
+      "text": "Active optical cables for in-rack and to-rack datacenter connectivity, low latency, low power."
+    },
+    {
+      "title": "Fiber Patch Cords & Jumpers",
+      "text": "SC, LC, FC, ST connectors; single-mode and multi-mode; PVC/LSZH jackets, custom lengths."
+    },
+    {
+      "title": "Industrial Valves",
+      "text": "Through our subsidiary, we distribute trusted Chinese-brand industrial valves for process industries."
+    }
   ],
+  "contact.address": "No.888, South Section of Tianfu Avenue, Huayang Street, Tianfu New District, Chengdu, P.R. China",
+  "about.approach": "We don't try to do everything. We focus on optical components we understand well, and on the valve brands we have personally vetted. If a product isn't right for your application, we'll tell you.",
+  "about.mission": "To be the supplier our customers call when a link needs to work on day one — and keep working for years after.",
+  "productsValve": [
+    {
+      "title": "Ball Valves",
+      "text": "Cast / forged steel, stainless steel, floating and trunnion designs."
+    },
+    {
+      "title": "Gate / Globe / Check Valves",
+      "text": "ANSI / JIS / DIN standards, flange and threaded ends."
+    },
+    {
+      "title": "Control Valves",
+      "text": "Pneumatic and electric actuated valves for process control."
+    },
+    {
+      "title": "Valve Accessories",
+      "text": "Actuators, solenoids, limit switches, positioners."
+    }
+  ],
+  "hero.subtitle": "Pedex manufactures and supplies a comprehensive range of optical transceivers across mainstream data rates, along with fiber optics, patch cords, connectors, active optical cables, and fiber optic cabling solutions. With engineering expertise and flexible global sourcing capabilities, we deliver reliable connectivity solutions tailored to diverse customer requirements.",
+  "hero.title1": "We Make the Connections. Light Does the Rest.",
   "about": {
     "title": "Two businesses, one standard: reliable supply.",
     "text": "Pedex is a supplier of optical interconnect products and industrial flow-control equipment. Our optical division covers the full physical layer — transceivers, AOCs, fiber jumpers and fiber cables — serving telecom operators, datacenter integrators, system houses and regional distributors.",
@@ -39,28 +96,69 @@
     "approach": "We don't try to do everything. We focus on optical components we understand well, and on the valve brands we have personally vetted. If a product isn't right for your application, we'll tell you.",
     "markets": "Telecom & datacom · Data centers · Access networks · Industrial automation · Process industries"
   },
-  "productsOptical": [
-    { "title": "Optical Transceivers", "text": "10G / 25G / 100G / 200G / 400G / 800G / 1.6T.\nSR, LR, ER, ZR, PON, coherent variants.\nSFP+, SFP28, QSFP28, QSFP-DD, OSFP." },
-    { "title": "AOC Cables", "text": "10G/25G/100G/400G AOC for switch-to-server, switch-to-switch. Custom lengths up to 100 m." },
-    { "title": "Fiber Patch Cords / Jumpers", "text": "SC / LC / FC / ST connectors. UPC / APC polish. SM OS2 and OM3/OM4/OM5. Simplex & duplex." },
-    { "title": "Fiber Cables", "text": "Distribution, breakout, armored, outdoor, indoor/outdoor. G.652D / G.657.A1 fiber." }
-  ],
-  "productsValve": [
-    { "title": "Ball Valves", "text": "Cast / forged steel, stainless steel, floating and trunnion designs." },
-    { "title": "Gate / Globe / Check Valves", "text": "ANSI / JIS / DIN standards, flange and threaded ends." },
-    { "title": "Control Valves", "text": "Pneumatic and electric actuated valves for process control." },
-    { "title": "Valve Accessories", "text": "Actuators, solenoids, limit switches, positioners." }
-  ],
+  "contact.email": "tiger@pedex.cn",
+  "hero.title2": "----Optical Transceivers and Components for Datacom and Broadband Networks.",
+  "about.text": "Chengdu Pedex Technology Co., Ltd. was founded in 2021 in Chengdu, Sichuan, China — the beautiful “Land of Abundance.” We serve customers across domestic and international markets, with an overseas presence spanning Europe, the United States, the Middle East, and North Africa.\n\nOur business brings together two specialized divisions: optical communications and industrial flow control.\n\nOptical Connectivity, from the Device to the Network\n\nOur optical communications division covers a broad range of connectivity products, including optical transceivers, optical components, fiber optics, patch cords, connectors, active optical cables (AOCs), and fiber optic cables.\n\nWe work with telecom operators, data center integrators, system integrators, and regional distributors to meet a wide range of technical and commercial requirements. Whether you need standard products, customized solutions, or a sourcing partner who understands the details, we focus on making your supply chain work better.\n\nIndustrial Flow Control, Built for the Job\n\nThrough our subsidiary, we manufacture industrial valves, including gate valves, ball valves, and butterfly valves, serving diverse industrial applications.\n\nDifferent industries, different products — but the same approach: practical solutions, dependable quality, and service that puts the customer first.\n\nFlexible by Design. Practical by Nature.\n\nAt Pedex, we understand that business doesn't always come in one size. Some customers need high-volume supply; others need smaller quantities, special specifications, or a tailored solution.\n\nBig orders are welcome. Small orders are welcome, too. We believe a good partnership should be based on what you need, not just how many units you buy.\n\nFrom standard products to customized requirements, we aim to offer flexible service, competitive value, and a straightforward way of doing business.\n\nPedex — Different industries. Connected by one commitment: making business easier for our customers.",
   "news": [
-    { "date": "2026", "title": "New product line: 800G OSFP modules now in stock", "text": "Our optical division has expanded 800G SR8 / DR8 / VR8 inventory for datacenter customers. Contact us for lead time and samples." },
-    { "date": "2026", "title": "AOC portfolio expanded to 400G", "text": "400G QSFP-DD AOC cables are now available in standard lengths, supporting high-density switch deployments." },
-    { "date": "2026", "title": "Valve division: new authorized distribution agreement", "text": "Our subsidiary has added a leading Chinese industrial valve brand to its authorized line card. Details available on request." }
+    {
+      "date": "2026",
+      "title": "New product line: 800G OSFP modules now in stock",
+      "text": "Our optical division has expanded 800G SR8 / DR8 / VR8 inventory for datacenter customers. Contact us for lead time and samples."
+    },
+    {
+      "date": "2026",
+      "title": "AOC portfolio expanded to 400G",
+      "text": "400G QSFP-DD AOC cables are now available in standard lengths, supporting high-density switch deployments."
+    },
+    {
+      "date": "2026",
+      "title": "Valve division: new authorized distribution agreement",
+      "text": "Our subsidiary has added a leading Chinese industrial valve brand to its authorized line card. Details available on request."
+    }
   ],
-  "contact": {
-    "email": "tiger@pedex.cn",
-    "phone": "+86 18782927342",
-    "whatsapp": "+86 18782927342",
-    "address": "No.888, South Section of Tianfu Avenue, Huayang Street, Tianfu New District, Chengdu, P.R. China",
-    "hours": "Monday – Friday, 9:00 – 18:00 (Beijing Time)"
-  }
+  "productsOptical": [
+    {
+      "title": "Optical Transceivers",
+      "text": "10G / 25G / 100G / 200G / 400G / 800G / 1.6T.\nSR, LR, ER, ZR, PON, coherent variants.\nSFP+, SFP28, QSFP28, QSFP-DD, OSFP."
+    },
+    {
+      "title": "AOC Cables",
+      "text": "10G/25G/100G/400G AOC for switch-to-server, switch-to-switch. Custom lengths up to 100 m."
+    },
+    {
+      "title": "Fiber Patch Cords / Jumpers",
+      "text": "SC / LC / FC / ST connectors. UPC / APC polish. SM OS2 and OM3/OM4/OM5. Simplex & duplex."
+    },
+    {
+      "title": "Fiber Cables",
+      "text": "Distribution, breakout, armored, outdoor, indoor/outdoor. G.652D / G.657.A1 fiber."
+    }
+  ],
+  "hero.eyebrow": "Optical Interconnect · Transceivers· AOC · Fiber Cabling",
+  "about.markets": "Telecom & datacom · Data centers · Access networks · Industrial automation · Process industries",
+  "about.title": "Two businesses, one standard: reliable supply.",
+  "hero": {
+    "eyebrow": "Optical Interconnect · AOC · Fiber Cabling",
+    "title1": "Connecting the world,",
+    "title2": "one optical link at a time.",
+    "subtitle": "Pedex supplies optical transceivers across all mainstream rates, active optical cables, fiber patch cords, jumpers and fiber cables — backed by engineering support and flexible global sourcing."
+  },
+  "stats": [
+    {
+      "value": "10G–1.6T",
+      "label": "Transceiver rate coverage"
+    },
+    {
+      "value": "4",
+      "label": "Product lines under one roof"
+    },
+    {
+      "value": "2",
+      "label": "Business divisions: optical + industrial valves"
+    },
+    {
+      "value": "Global",
+      "label": "Export & on-time delivery"
+    }
+  ]
 }
