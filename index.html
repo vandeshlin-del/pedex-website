@@ -85,6 +85,7 @@
   .back-link:hover{text-decoration:underline}
   .pd-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin:6px 0 40px}
   .pd-card{background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden;transition:.25s;cursor:default}
+  .pd-card.clickable{cursor:pointer}
   .pd-card:hover{transform:translateY(-4px);box-shadow:0 12px 30px rgba(11,30,63,.08)}
   .pd-img{height:160px;background:var(--bg);display:flex;align-items:center;justify-content:center;overflow:hidden}
   .pd-img img{width:100%;height:100%;object-fit:cover}
@@ -247,6 +248,20 @@
       <p style="color:var(--muted)" id="pd-intro"></p>
     </div>
     <div class="pd-grid" id="pd-items"></div>
+    <p style="color:var(--muted);margin-bottom:60px">Need a datasheet, sample or quote? <a style="color:var(--cyan-2);text-decoration:underline;cursor:pointer" onclick="go('contact')">Contact us</a>.</p>
+  </div>
+</section>
+
+<!-- ============ MODEL DETAIL ============ -->
+<section class="view" id="view-variant">
+  <div class="container">
+    <a class="back-link" id="pv-back" onclick="goProduct(window.CURRENT_CAT)">← Back</a>
+    <div class="section-head">
+      <div class="eyebrow-2">Products &amp; Services</div>
+      <h2 id="pv-title"></h2>
+      <p style="color:var(--muted)" id="pv-intro"></p>
+    </div>
+    <div class="pd-grid" id="pv-items"></div>
     <p style="color:var(--muted);margin-bottom:60px">Need a datasheet, sample or quote? <a style="color:var(--cyan-2);text-decoration:underline;cursor:pointer" onclick="go('contact')">Contact us</a>.</p>
   </div>
 </section>
@@ -444,23 +459,50 @@
     window.scrollTo({top:0,behavior:'smooth'});
   }
 
+  var CAT_ICON = {transceivers:ICONS.transceiver,aoc:ICONS.aoc,patchcords:ICONS.patch,fibercables:ICONS.fiber,ballvalves:ICONS.ball,gateglobecheck:ICONS.gate,controlvalves:ICONS.control,valveaccessories:ICONS.acc};
+
   function goProduct(id){
     var d = window.SITE_DATA || {};
     var cats = V(d,'productCatalog') || [];
     var cat = null;
     for(var i=0;i<cats.length;i++){ if(cats[i].id === id){ cat = cats[i]; break; } }
     if(!cat){ go('products'); return; }
+    window.CURRENT_CAT = id;
     setText('pd-title', cat.title);
     setText('pd-intro', cat.intro || '');
     var items = cat.items || [];
-    var CAT_ICON = {transceivers:ICONS.transceiver,aoc:ICONS.aoc,patchcords:ICONS.patch,fibercables:ICONS.fiber,ballvalves:ICONS.ball,gateglobecheck:ICONS.gate,controlvalves:ICONS.control,valveaccessories:ICONS.acc};
     var icon = CAT_ICON[id] || ICONS.transceiver;
-    document.getElementById('pd-items').innerHTML = items.length ? items.map(function(it){
+    document.getElementById('pd-items').innerHTML = items.length ? items.map(function(it,idx){
       var img = it.img ? '<img src="'+esc(it.img)+'" alt="'+esc(it.name)+'">' : (cat.img ? '<img src="'+esc(cat.img)+'" alt="'+esc(cat.title)+'">' : '<div class="ico">'+icon+'</div>');
-      return '<div class="pd-card"><div class="pd-img">'+img+'</div><div class="pd-body"><div class="pd-name">'+esc(it.name)+'</div><div class="pd-spec">'+esc(it.spec)+'</div></div></div>';
+      var click = (it.variants && it.variants.length) ? ' class="pd-card clickable" onclick="goVariant(\''+id+'\','+idx+')"' : ' class="pd-card"';
+      return '<div'+click+'><div class="pd-img">'+img+'</div><div class="pd-body"><div class="pd-name">'+esc(it.name)+'</div><div class="pd-spec">'+esc(it.spec)+'</div></div></div>';
     }).join('') : '<p style="color:var(--muted);padding:20px 0">Details coming soon. Contact us for the full list.</p>';
     document.querySelectorAll('.view').forEach(function(v){ v.classList.remove('active'); });
     document.getElementById('view-product').classList.add('active');
+    document.querySelectorAll('.menu a').forEach(function(a){ a.classList.toggle('active', a.dataset.view==='products'); });
+    document.getElementById('menu').classList.remove('open');
+    window.scrollTo({top:0,behavior:'smooth'});
+  }
+
+  function goVariant(catId, idx){
+    var d = window.SITE_DATA || {};
+    var cats = V(d,'productCatalog') || [];
+    var cat = null;
+    for(var i=0;i<cats.length;i++){ if(cats[i].id === catId){ cat = cats[i]; break; } }
+    if(!cat){ return; }
+    var items = cat.items || [];
+    var item = items[idx];
+    if(!item || !item.variants || !item.variants.length){ return; }
+    window.CURRENT_CAT = catId;
+    setText('pv-title', item.name);
+    setText('pv-intro', item.spec || '');
+    var icon = CAT_ICON[catId] || ICONS.transceiver;
+    document.getElementById('pv-items').innerHTML = item.variants.map(function(v){
+      var img = v.img ? '<img src="'+esc(v.img)+'" alt="'+esc(v.name)+'">' : (cat.img ? '<img src="'+esc(cat.img)+'" alt="'+esc(cat.title)+'">' : '<div class="ico">'+icon+'</div>');
+      return '<div class="pd-card"><div class="pd-img">'+img+'</div><div class="pd-body"><div class="pd-name">'+esc(v.name)+'</div><div class="pd-spec">'+esc(v.spec)+'</div></div></div>';
+    }).join('');
+    document.querySelectorAll('.view').forEach(function(v){ v.classList.remove('active'); });
+    document.getElementById('view-variant').classList.add('active');
     document.querySelectorAll('.menu a').forEach(function(a){ a.classList.toggle('active', a.dataset.view==='products'); });
     document.getElementById('menu').classList.remove('open');
     window.scrollTo({top:0,behavior:'smooth'});

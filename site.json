@@ -149,31 +149,173 @@
       "items": [
         {
           "name": "10G SFP+",
-          "spec": "SR / LR / ER / ZR · 300 m – 80 km · SM / MM"
+          "spec": "SR / LR / ER / ZR · 300 m – 80 km · SM / MM",
+          "variants": [
+            {
+              "name": "10G SR",
+              "spec": "300 m · OM3/OM4 · multimode"
+            },
+            {
+              "name": "10G LR",
+              "spec": "10 km · single-mode"
+            },
+            {
+              "name": "10G ER",
+              "spec": "40 km · single-mode"
+            },
+            {
+              "name": "10G ZR",
+              "spec": "80 km · single-mode"
+            },
+            {
+              "name": "10G BIDI",
+              "spec": "20 km · single fiber · 1270/1330 nm"
+            }
+          ]
         },
         {
           "name": "25G SFP28",
-          "spec": "SR / LR / ER · 100 m – 40 km · SM"
+          "spec": "SR / LR / ER · 100 m – 40 km · SM",
+          "variants": [
+            {
+              "name": "25G SR",
+              "spec": "100 m · OM3/OM4 · multimode"
+            },
+            {
+              "name": "25G LR",
+              "spec": "10 km · single-mode"
+            },
+            {
+              "name": "25G ER",
+              "spec": "40 km · single-mode"
+            }
+          ]
         },
         {
           "name": "100G QSFP28",
-          "spec": "SR4 / LR4 / CWDM4 · 100 m – 2 km · SM"
+          "spec": "SR4 / LR4 / CWDM4 · 100 m – 2 km · SM",
+          "variants": [
+            {
+              "name": "100G SR4",
+              "spec": "100 m · MPO · OM4"
+            },
+            {
+              "name": "100G LR4",
+              "spec": "10 km · LC · single-mode"
+            },
+            {
+              "name": "100G ER4",
+              "spec": "40 km · LC · single-mode"
+            },
+            {
+              "name": "100G ER4 Lite",
+              "spec": "40 km · LC · single-mode"
+            },
+            {
+              "name": "100G ZR4",
+              "spec": "80 km · LC · single-mode"
+            },
+            {
+              "name": "100G BIDI",
+              "spec": "2 km · single fiber"
+            }
+          ]
         },
         {
           "name": "200G QSFP56",
-          "spec": "SR4 / FR4 · 100 m – 2 km · SM"
+          "spec": "SR4 / FR4 · 100 m – 2 km · SM",
+          "variants": [
+            {
+              "name": "200G SR4",
+              "spec": "100 m · MPO · OM4"
+            },
+            {
+              "name": "200G FR4",
+              "spec": "2 km · LC · single-mode"
+            },
+            {
+              "name": "200G LR4",
+              "spec": "10 km · LC · single-mode"
+            }
+          ]
         },
         {
           "name": "400G QSFP-DD",
-          "spec": "DR4 / FR4 / LR4 · 500 m – 10 km · SM"
+          "spec": "DR4 / FR4 / LR4 · 500 m – 10 km · SM",
+          "variants": [
+            {
+              "name": "400G DR4",
+              "spec": "500 m · MPO-12 · single-mode"
+            },
+            {
+              "name": "400G SR4",
+              "spec": "100 m · MPO-12 · OM4"
+            },
+            {
+              "name": "400G FR4",
+              "spec": "2 km · LC / CS · single-mode"
+            },
+            {
+              "name": "400G ER4",
+              "spec": "40 km · LC · single-mode"
+            },
+            {
+              "name": "400G ZR4",
+              "spec": "80 km · LC · single-mode"
+            },
+            {
+              "name": "400G BIDI",
+              "spec": "2 km · single fiber"
+            }
+          ]
         },
         {
           "name": "800G OSFP / QSFP-DD",
-          "spec": "SR8 / DR8 / 2xFR4 · 100 m – 2 km · SM"
+          "spec": "SR8 / DR8 / 2xFR4 · 100 m – 2 km · SM",
+          "variants": [
+            {
+              "name": "800G VR8",
+              "spec": "50 m · MPO · OM4"
+            },
+            {
+              "name": "800G SR8",
+              "spec": "100 m · MPO-16 · OM4"
+            },
+            {
+              "name": "800G DR8",
+              "spec": "500 m · MPO-16 · single-mode"
+            },
+            {
+              "name": "800G FR4",
+              "spec": "2 km · LC / CS · single-mode"
+            },
+            {
+              "name": "800G LR8",
+              "spec": "10 km · LC · single-mode"
+            }
+          ]
         },
         {
           "name": "1.6T",
-          "spec": "Roadmap · contact us for availability"
+          "spec": "Roadmap · contact us for availability",
+          "variants": [
+            {
+              "name": "1.6T SR8",
+              "spec": "100 m · planned"
+            },
+            {
+              "name": "1.6T DR8",
+              "spec": "500 m · planned"
+            },
+            {
+              "name": "1.6T FR4",
+              "spec": "2 km · planned"
+            },
+            {
+              "name": "1.6T LR8",
+              "spec": "10 km · planned"
+            }
+          ]
         }
       ],
       "img": "https://media.doubao.com/space/api/box/stream/download/all_by_mount_point/QpT9biDFjoMSX0xSbnNcjMd0nnf"
