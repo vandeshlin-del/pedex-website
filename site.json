@@ -11,24 +11,24 @@
   "contact.hours": "Monday – Friday, 9:00 – 18:00 (Beijing Time)",
   "marquee": [
     {
-      "img": "https://media.doubao.com/space/api/box/stream/download/all_by_mount_point/QpT9biDFjoMSX0xSbnNcjMd0nnf",
+      "img": "/assets/uploads/400g-qsfp-dd图片.png",
       "label": "400G QSFP-DD",
-      "sub": "Optical Transceiver"
+      "sub": "Optical Transceiver for reaches 100m,2Km,10Km,30Km,40Km,80Km"
     },
     {
-      "img": "https://media.doubao.com/space/api/box/stream/download/all_by_mount_point/QpT9biDFjoMSX0xSbnNcjMd0nnf",
+      "img": "/assets/uploads/800g-qsfp-dd图片.png",
       "label": "800G OSFP / QSFP-DD",
-      "sub": "Optical Transceiver"
+      "sub": "Optical Transceiver for reaches 50m,100m,2Km,10Km,30Km,40Km,80Km"
     },
     {
-      "img": "https://media.doubao.com/space/api/box/stream/download/all_by_mount_point/QpT9biDFjoMSX0xSbnNcjMd0nnf",
+      "img": "/assets/uploads/100g-qsfp28-图片.png",
       "label": "100G QSFP28",
-      "sub": "Optical Transceiver"
+      "sub": "Optical Transceiver for reaches 100m,2Km,10Km,30Km,40Km,80Km"
     },
     {
-      "img": "https://media.doubao.com/space/api/box/stream/download/all_by_mount_point/O9pPbxu1EoJ2iMxByqGctTTinIk",
+      "img": "/assets/uploads/100g-aoc图片.png",
       "label": "AOC Cable",
-      "sub": "Active Optical Cable"
+      "sub": "Active Optical Cable for 10G~800G rates and 1~30m"
     },
     {
       "img": "https://media.doubao.com/space/api/box/stream/download/all_by_mount_point/LZhLb3EFKoCyPVxqH3PcUwqknMe",
