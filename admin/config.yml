@@ -90,6 +90,13 @@ collections:
                   - { label: "Product Image (optional)", name: "img", widget: "image", required: false }
                   - { label: "Product Name", name: "name", widget: "string" }
                   - { label: "Specifications", name: "spec", widget: "string" }
+                  - label: "Sub-models (click-through detail, optional)"
+                    name: "variants"
+                    widget: "list"
+                    required: false
+                    fields:
+                      - { label: "Model Name", name: "name", widget: "string" }
+                      - { label: "Specifications", name: "spec", widget: "string" }
           - label: "News items"
             name: "news"
             widget: "list"
