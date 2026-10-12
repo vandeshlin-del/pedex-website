@@ -76,6 +76,20 @@ collections:
             fields:
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Text", name: "text", widget: "text" }
+          - label: "Product detail pages (click-through catalog)"
+            name: "productCatalog"
+            widget: "list"
+            fields:
+              - { label: "ID (keep unchanged, used for page links)", name: "id", widget: "string" }
+              - { label: "Category Title", name: "title", widget: "string" }
+              - { label: "Intro", name: "intro", widget: "text" }
+              - label: "Products in this category"
+                name: "items"
+                widget: "list"
+                fields:
+                  - { label: "Product Image (optional)", name: "img", widget: "image", required: false }
+                  - { label: "Product Name", name: "name", widget: "string" }
+                  - { label: "Specifications", name: "spec", widget: "string" }
           - label: "News items"
             name: "news"
             widget: "list"
@@ -98,3 +112,4 @@ collections:
           - label: "Contact — Business Hours"
             name: "contact.hours"
             widget: "string"
+#（注：内容由AI生成）
