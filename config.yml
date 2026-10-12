@@ -1,0 +1,114 @@
+site_url: https://elegant-puppy-5754d6.netlify.app
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+collections:
+  - name: "content"
+    label: "Website Content"
+    format: "json"
+    files:
+      - name: "site"
+        label: "General Content"
+        file: "site.json"
+        fields:
+          - label: "Hero — Eyebrow"
+            name: "hero.eyebrow"
+            widget: "string"
+          - label: "Hero — Title Line 1"
+            name: "hero.title1"
+            widget: "string"
+          - label: "Hero — Title Line 2"
+            name: "hero.title2"
+            widget: "string"
+          - label: "Hero — Subtitle"
+            name: "hero.subtitle"
+            widget: "text"
+          - label: "Stats (numbers shown on home)"
+            name: "stats"
+            widget: "list"
+            fields:
+              - { label: "Value", name: "value", widget: "string" }
+              - { label: "Label", name: "label", widget: "string" }
+          - label: "Scrolling product strip"
+            name: "marquee"
+            widget: "list"
+            fields:
+              - { label: "Image", name: "img", widget: "image" }
+              - { label: "Title", name: "label", widget: "string" }
+              - { label: "Subtitle", name: "sub", widget: "string" }
+          - label: "Home cards (4 categories)"
+            name: "homeCards"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }
+          - label: "About — Title"
+            name: "about.title"
+            widget: "string"
+          - label: "About — Text"
+            name: "about.text"
+            widget: "text"
+          - label: "About — Bullet points"
+            name: "about.points"
+            widget: "list"
+          - label: "About — Mission"
+            name: "about.mission"
+            widget: "text"
+          - label: "About — Approach"
+            name: "about.approach"
+            widget: "text"
+          - label: "About — Markets"
+            name: "about.markets"
+            widget: "text"
+          - label: "Products — Optical Division"
+            name: "productsOptical"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }
+          - label: "Products — Valve Division"
+            name: "productsValve"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }
+          - label: "Product detail pages (click-through catalog)"
+            name: "productCatalog"
+            widget: "list"
+            fields:
+              - { label: "ID (keep unchanged, used for page links)", name: "id", widget: "string" }
+              - { label: "Category Title", name: "title", widget: "string" }
+              - { label: "Intro", name: "intro", widget: "text" }
+              - label: "Products in this category"
+                name: "items"
+                widget: "list"
+                fields:
+                  - { label: "Product Name", name: "name", widget: "string" }
+                  - { label: "Specifications", name: "spec", widget: "string" }
+          - label: "News items"
+            name: "news"
+            widget: "list"
+            fields:
+              - { label: "Date", name: "date", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }
+          - label: "Contact — Email"
+            name: "contact.email"
+            widget: "string"
+          - label: "Contact — Phone"
+            name: "contact.phone"
+            widget: "string"
+          - label: "Contact — WhatsApp"
+            name: "contact.whatsapp"
+            widget: "string"
+          - label: "Contact — Address"
+            name: "contact.address"
+            widget: "text"
+          - label: "Contact — Business Hours"
+            name: "contact.hours"
+            widget: "string"
+#（注：内容由AI生成）
