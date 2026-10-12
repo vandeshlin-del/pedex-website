@@ -316,73 +316,87 @@
   function esc(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
   function nl2br(s){ return esc(s).replace(/\n/g,'<br>'); }
 
+  // Read a value that may be stored nested (hero: {title1: ...}) or flat ("hero.title1": ...)
+  function V(d, path){
+    if(!d || !path) return null;
+    var cur = d, ok = true;
+    var keys = path.split('.');
+    for(var i=0;i<keys.length;i++){
+      if(cur == null || !(keys[i] in cur)){ ok = false; break; }
+      cur = cur[keys[i]];
+    }
+    if(ok && cur != null) return cur;
+    return d[path];
+  }
+
   function render(d){
     if(!d) return;
     // hero
-    if(d.hero){
-      setText('hero-eyebrow', d.hero.eyebrow);
-      setText('hero-title-1', d.hero.title1);
-      setText('hero-title-2', d.hero.title2);
-      setText('hero-sub', d.hero.subtitle);
-    }
+    setText('hero-eyebrow', V(d,'hero.eyebrow'));
+    setText('hero-title-1', V(d,'hero.title1'));
+    setText('hero-title-2', V(d,'hero.title2'));
+    setText('hero-sub', V(d,'hero.subtitle'));
     // marquee
-    if(d.marquee && d.marquee.length){
-      var mq = d.marquee.concat(d.marquee).map(function(m){
+    var mq = V(d,'marquee');
+    if(mq && mq.length){
+      var mqHtml = mq.concat(mq).map(function(m){
         return '<div class="m-item"><img src="'+esc(m.img)+'" alt="'+esc(m.label)+'"><div class="m-label">'+esc(m.label)+'</div><div class="m-sub">'+esc(m.sub)+'</div></div>';
       }).join('');
-      document.getElementById('marquee-track').innerHTML = mq;
+      document.getElementById('marquee-track').innerHTML = mqHtml;
     }
     // stats
-    if(d.stats && d.stats.length){
-      document.getElementById('stats-grid').innerHTML = d.stats.map(function(s){
+    var st = V(d,'stats');
+    if(st && st.length){
+      document.getElementById('stats-grid').innerHTML = st.map(function(s){
         return '<div class="stat"><b>'+esc(s.value)+'</b><span>'+esc(s.label)+'</span></div>';
       }).join('');
     }
     // home cards
-    if(d.homeCards && d.homeCards.length){
-      document.getElementById('home-cards').innerHTML = d.homeCards.map(function(c,i){
+    var hc = V(d,'homeCards');
+    if(hc && hc.length){
+      document.getElementById('home-cards').innerHTML = hc.map(function(c,i){
         return '<div class="card" onclick="go(\'products\')"><div class="ico">'+(ICONS[HOME_ICONS[i]]||ICONS.transceiver)+'</div><h3>'+esc(c.title)+'</h3><p>'+esc(c.text)+'</p></div>';
       }).join('');
     }
     // about
-    if(d.about){
-      setText('about-title', d.about.title);
-      setText('about-text', d.about.text);
-      setText('about-mission', d.about.mission);
-      setText('about-approach', d.about.approach);
-      setText('about-markets', d.about.markets);
-      if(d.about.points && d.about.points.length){
-        document.getElementById('about-points').innerHTML = d.about.points.map(function(p){ return '<li>'+esc(p)+'</li>'; }).join('');
-      }
+    setText('about-title', V(d,'about.title'));
+    setText('about-text', V(d,'about.text'));
+    setText('about-mission', V(d,'about.mission'));
+    setText('about-approach', V(d,'about.approach'));
+    setText('about-markets', V(d,'about.markets'));
+    var pts = V(d,'about.points');
+    if(pts && pts.length){
+      document.getElementById('about-points').innerHTML = pts.map(function(p){ return '<li>'+esc(p)+'</li>'; }).join('');
     }
     // products
     var P_ICONS = ['transceiver','aoc','patch','fiber'];
-    if(d.productsOptical){
-      document.getElementById('products-optical').innerHTML = d.productsOptical.map(function(p,i){
+    var po = V(d,'productsOptical');
+    if(po){
+      document.getElementById('products-optical').innerHTML = po.map(function(p,i){
         return '<div class="card"><div class="ico">'+(ICONS[P_ICONS[i]]||ICONS.transceiver)+'</div><h3>'+esc(p.title)+'</h3><p>'+nl2br(p.text)+'</p></div>';
       }).join('');
     }
-    if(d.productsValve){
+    var pv = V(d,'productsValve');
+    if(pv){
       var V_ICONS = ['ball','gate','control','acc'];
-      document.getElementById('products-valve').innerHTML = d.productsValve.map(function(p,i){
+      document.getElementById('products-valve').innerHTML = pv.map(function(p,i){
         return '<div class="card"><div class="ico">'+(ICONS[V_ICONS[i]]||ICONS.ball)+'</div><h3>'+esc(p.title)+'</h3><p>'+nl2br(p.text)+'</p></div>';
       }).join('');
     }
     // news
-    if(d.news && d.news.length){
-      document.getElementById('news-list').innerHTML = d.news.map(function(n){
+    var ns = V(d,'news');
+    if(ns && ns.length){
+      document.getElementById('news-list').innerHTML = ns.map(function(n){
         return '<div class="news-item"><div class="date">'+esc(n.date)+'</div><div><h4>'+esc(n.title)+'</h4><p>'+esc(n.text)+'</p></div></div>';
       }).join('');
     }
     // contact
-    if(d.contact){
-      setText('contact-email', d.contact.email);
-      setText('contact-phone', d.contact.phone);
-      setText('contact-address', d.contact.address);
-      setText('contact-hours', d.contact.hours);
-      setText('foot-email', d.contact.email);
-      setText('foot-phone', d.contact.phone);
-    }
+    setText('contact-email', V(d,'contact.email'));
+    setText('contact-phone', V(d,'contact.phone'));
+    setText('contact-address', V(d,'contact.address'));
+    setText('contact-hours', V(d,'contact.hours'));
+    setText('foot-email', V(d,'contact.email'));
+    setText('foot-phone', V(d,'contact.phone'));
   }
 
   function setText(id, v){
