@@ -95,6 +95,7 @@ collections:
                     widget: "list"
                     required: false
                     fields:
+                      - { label: "Model Image (optional)", name: "img", widget: "image", required: false }
                       - { label: "Model Name", name: "name", widget: "string" }
                       - { label: "Specifications", name: "spec", widget: "string" }
           - label: "News items"
